@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>onlinefood1</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.sunbeaminfo.sh.onlinefood.servlets.LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CategoryServlet</servlet-name>
+		<servlet-class>com.sunbeaminfo.sh.onlinefood.servlets.CategoryServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ItemServlet</servlet-name>
+		<servlet-class>com.sunbeaminfo.sh.onlinefood.servlets.ItemServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AddCartServlet</servlet-name>
+		<servlet-class>com.sunbeaminfo.sh.onlinefood.servlets.AddCartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CategoryServlet</servlet-name>
+		<url-pattern>/categories</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ItemServlet</servlet-name>
+		<url-pattern>/items</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddCartServlet</servlet-name>
+		<url-pattern>/addcart</url-pattern>
+	</servlet-mapping>
+	
+	<filter>
+		<filter-name>SecurityFilter</filter-name>
+		<filter-class>com.sunbeaminfo.sh.onlinefood.filters.OnlineFoodAppFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SecurityFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<session-config>
+		<session-timeout>30</session-timeout>	
+		<cookie-config>
+			<name>sid</name>
+		</cookie-config>
+		<tracking-mode>COOKIE</tracking-mode>
+	</session-config>
+	<context-param>
+		<param-name>color</param-name>
+		<param-value>pink</param-value>
+	</context-param>
+	<listener>
+		<listener-class>com.sunbeaminfo.sh.onlinefood.listeners.OnlineFoodAppListener</listener-class>
+	</listener>
+</web-app>

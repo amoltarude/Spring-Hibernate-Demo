@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- dependency beans -->
+	
+	<bean id="cl" class="com.sunbeaminfo.sh.sp.ConsoleLoggerImpl"/>
+	
+	<!-- <bean id="fl" class="com.sunbeaminfo.sh.sp.FileLoggerImpl" autowire-candidate="false"> -->
+	<!-- 
+	<bean id="fl" class="com.sunbeaminfo.sh.sp.FileLoggerImpl">
+		<property name="logFilePath" value="myapplog.txt"/>
+	</bean>
+	 -->
+	<!-- dependent beans -->
+	
+	<bean id="b1" class="com.sunbeaminfo.sh.sp.BoxImpl">
+		<property name="length" value="10"/>
+		<property name="breadth" value="10"/>
+		<property name="height" value="10"/>
+		<property name="logger" ref="cl"/>	
+	</bean>
+	
+	<!-- 
+	<bean id="b2" class="com.sunbeaminfo.sh.sp.BoxImpl" autowire="byType">
+		<property name="length" value="5"/>
+		<property name="breadth" value="5"/>
+		<property name="height" value="5"/>
+		<property name="logger" ref="cl"/>	
+		
+	</bean>
+ --> 
+</beans>

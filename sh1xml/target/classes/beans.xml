@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- setter based DI -->
+	<bean id="b1" class="com.sunbeaminfo.sh.sp.BoxImpl"
+		init-method="boxInit" destroy-method="boxDestroy">
+		<property name="length" value="10"/>
+		<property name="breadth" value="8"/>
+		<property name="height" value="6"/>
+	</bean>
+	
+	<!-- constructor based DI -->
+	<bean id="b2" class="com.sunbeaminfo.sh.sp.BoxImpl">
+		<constructor-arg index="0" value="5"/>
+		<constructor-arg index="1" value="4"/>
+		<constructor-arg index="2" value="3"/>
+	</bean>
+</beans>

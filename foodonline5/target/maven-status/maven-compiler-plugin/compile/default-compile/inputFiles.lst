@@ -1,0 +1,11 @@
+/home/sunbeam/sh/sh6/workspace/foodonline5/src/main/java/com/sunbeaminfo/sh/onlinefood/utils/JdbcUtil.java
+/home/sunbeam/sh/sh6/workspace/foodonline5/src/main/java/com/sunbeaminfo/sh/onlinefood/daos/ItemDao.java
+/home/sunbeam/sh/sh6/workspace/foodonline5/src/main/java/com/sunbeaminfo/sh/onlinefood/daos/CustomerDao.java
+/home/sunbeam/sh/sh6/workspace/foodonline5/src/main/java/com/sunbeaminfo/sh/onlinefood/entities/Customer.java
+/home/sunbeam/sh/sh6/workspace/foodonline5/src/main/java/com/sunbeaminfo/sh/onlinefood/tags/ItemTag.java
+/home/sunbeam/sh/sh6/workspace/foodonline5/src/main/java/com/sunbeaminfo/sh/onlinefood/beans/CartBean.java
+/home/sunbeam/sh/sh6/workspace/foodonline5/src/main/java/com/sunbeaminfo/sh/onlinefood/beans/CategoryBean.java
+/home/sunbeam/sh/sh6/workspace/foodonline5/src/main/java/com/sunbeaminfo/sh/onlinefood/entities/Item.java
+/home/sunbeam/sh/sh6/workspace/foodonline5/src/main/java/com/sunbeaminfo/sh/onlinefood/controllers/ControllerServlet.java
+/home/sunbeam/sh/sh6/workspace/foodonline5/src/main/java/com/sunbeaminfo/sh/onlinefood/beans/LoginBean.java
+/home/sunbeam/sh/sh6/workspace/foodonline5/src/main/java/com/sunbeaminfo/sh/onlinefood/beans/CategoryItemsBean.java
